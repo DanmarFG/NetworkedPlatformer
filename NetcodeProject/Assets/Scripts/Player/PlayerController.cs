@@ -12,6 +12,7 @@ public class PlayerController : NetworkBehaviour
     {
         base.OnNetworkSpawn();
         PlayerRespawn();
+        SetColorBasedOnOwner();
     }
 
     public void PlayerHit()
@@ -41,5 +42,11 @@ public class PlayerController : NetworkBehaviour
     void SetSpawnPointBasedOnId()
     {
         transform.position = SpawnController.Instance.GetSpawnPoint((int)OwnerClientId).position;
+    }
+
+    void SetColorBasedOnOwner()
+    {
+        UnityEngine.Random.InitState((int)OwnerClientId);
+        GetComponentInChildren<Renderer>().material.color = UnityEngine.Random.ColorHSV();
     }
 }

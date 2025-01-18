@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
     guid: d268e930c1ed18c48b4d5bf6ebb3b52d
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 70222f9e0478e8c49af9d8b8b64cb177
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
